@@ -1,0 +1,1 @@
+drop table car_shop,car_description,car_image,car,users,model,brand,car_warehouse;

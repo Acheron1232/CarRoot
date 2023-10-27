@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="'Change Brand#'+${brand.get().id}">Change Brand</title>
+</head>
+<body>
+<p th:text="${brand.get().getId()}+'.'+${brand.get().getName()}"></p>
+<form th:action="@{|/brands/${brand.get().id}/change?id=${brand.get().id}|}" method="post">
+  <input type="text" name="name" placeholder="Enter a new name:">
+  <input type="submit">
+</form>
+</body>
+</html>

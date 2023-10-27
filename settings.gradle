@@ -1,0 +1,5 @@
+rootProject.name = 'caroot'
+
+include ':db'
+include ':service'
+include ':web'

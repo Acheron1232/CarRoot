@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://surus.db.elephantsql.com:5432/nmrgasvq
+    username: nmrgasvq
+    password: 6bSTe6ScZKJwfMLWdpRQsWpuEzxbQmMX
+    driver-class-name: org.postgresql.Driver
+#  mvc:
+#    view:
+#      suffix: .html
+#      prefix: template/
