@@ -1,33 +1,34 @@
 package com.acheron.service.service;
 
-import com.acheron.service.dto.BrandDto;
-import com.acheron.service.dto.CarShopDto;
+import com.acheron.service.dto.CarDto;
+import com.acheron.service.dto.CarImageDto;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+
 @Service
-public class CarShopService implements com.acheron.service.service.Service<CarShopDto,Long> {
+public class CarImageService implements com.acheron.service.service.Service<CarImageDto,Long> {
 
 
     @Override
-    public List<CarShopDto> findAll() {
+    public List<CarImageDto> findAll() {
         return null;
     }
 
     @Override
-    public Optional<CarShopDto> findById(Long id) {
+    public Optional<CarImageDto> findById(Long id) {
         return Optional.empty();
     }
 
     @Override
-    public CarShopDto save(CarShopDto object) {
+    public CarImageDto save(CarImageDto object) {
         return null;
     }
 
     @Override
-    public CarShopDto update(Long id, CarShopDto object) {
+    public CarImageDto update(Long id, CarImageDto object) {
         return null;
     }
 

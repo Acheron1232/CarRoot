@@ -1,5 +1,7 @@
 package com.acheron.service.service;
 
+import com.acheron.db.model.CarDescription;
+import com.acheron.service.dto.CarDescriptionDto;
 import com.acheron.service.dto.CarDto;
 import org.springframework.stereotype.Service;
 
@@ -8,26 +10,26 @@ import java.util.Optional;
 
 
 @Service
-public class CarService implements com.acheron.service.service.Service<CarDto,Long> {
+public class CarDescriptionService implements com.acheron.service.service.Service<CarDescriptionDto,Long> {
 
 
     @Override
-    public List<CarDto> findAll() {
+    public List<CarDescriptionDto> findAll() {
         return null;
     }
 
     @Override
-    public Optional<CarDto> findById(Long id) {
+    public Optional<CarDescriptionDto> findById(Long id) {
         return Optional.empty();
     }
 
     @Override
-    public CarDto save(CarDto object) {
+    public CarDescriptionDto save(CarDescriptionDto object) {
         return null;
     }
 
     @Override
-    public CarDto update(Long id, CarDto object) {
+    public CarDescriptionDto update(Long id, CarDescriptionDto object) {
         return null;
     }
 

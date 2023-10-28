@@ -1,12 +1,14 @@
 package com.acheron.service.dto;
 
+import lombok.Builder;
 import lombok.Value;
 
+
 @Value
-public class CarDto {
+@Builder
+public class CarDto implements Dto{
+
     Long id;
-    BrandDto brandDto;
-    String color;
-    String engine;
-    String model;
+    ModelDto modelDto;
+    UsersDto usersDto;
 }

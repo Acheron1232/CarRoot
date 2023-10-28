@@ -21,30 +21,34 @@ public class BrandService implements com.acheron.service.service.Service<BrandDt
 
     @Override
     public List<BrandDto> findAll() {
-        return brandRepository.findAll().stream().map(brandMapper::map).toList();
+        return brandRepository.findAll().stream().map(brandMapper::mapTo).toList();
     }
 
     @Override
     public Optional<BrandDto> findById(Long id) {
-        return brandRepository.findById(id).map(brandMapper::map);
+        return brandRepository.findById(id).map(brandMapper::mapTo);
     }
 
     @Override
     @Transactional
     public BrandDto save(BrandDto object) {
         return Optional.of(object).
-                map(brandMapper::map).
+                map(brandMapper::mapFrom).
                 map(brandRepository::save).
-                map(brandMapper::map).
+                map(brandMapper::mapTo).
                 orElseThrow();
     }
 
     @Transactional
     public BrandDto update(Long id,BrandDto object) {
         return brandRepository.findById(id).
-                map(entity -> brandMapper.map(object,entity)).
+                map(entity -> {entity.setName(object.getName());
+                    entity.setImage(object.getImage());
+                            return entity;
+                        }
+                ).
                 map(brandRepository::saveAndFlush).
-                map(brandMapper::map).
+                map(brandMapper::mapTo).
                 orElseThrow();
     }
     @Transactional

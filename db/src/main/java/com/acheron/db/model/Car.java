@@ -18,12 +18,10 @@ public class Car implements com.acheron.db.model.Entity<Long> {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    Brand brand;
+    @ManyToOne
+    Model model;
 
-    String color;
+    @ManyToOne
+    Users users;
 
-    String engine;
-
-    String model;
 }
