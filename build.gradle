@@ -22,8 +22,10 @@ repositories {
 }
 
 dependencies {
+	implementation project(':web')
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
 }
+

@@ -16,6 +16,7 @@ configurations {
         extendsFrom annotationProcessor
     }
 }
+
 tasks.register("prepareKotlinBuildScriptModel"){}
 repositories {
     mavenCentral()

@@ -19,9 +19,11 @@ public class Car implements com.acheron.db.model.Entity<Long> {
     Long id;
 
     @ManyToOne
+    @JoinColumn(name = "model_id")
     Model model;
 
     @ManyToOne
+    @JoinColumn(name = "users_id")
     Users users;
 
 }

@@ -16,7 +16,9 @@ configurations {
         extendsFrom annotationProcessor
     }
 }
-
+task wrapper(type: Wrapper) {
+    gradleVersion = '8.4'
+}
 repositories {
     mavenCentral()
 }

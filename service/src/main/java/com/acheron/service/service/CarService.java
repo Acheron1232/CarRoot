@@ -1,6 +1,10 @@
 package com.acheron.service.service;
 
+import com.acheron.db.model.Car;
+import com.acheron.db.repository.CarRepository;
 import com.acheron.service.dto.CarDto;
+import com.acheron.service.mapper.CarMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,10 +14,15 @@ import java.util.Optional;
 @Service
 public class CarService implements com.acheron.service.service.Service<CarDto,Long> {
 
-
+    @Autowired
+    CarRepository carRepository;
+    @Autowired
+    CarMapper carMapper;
     @Override
     public List<CarDto> findAll() {
-        return null;
+        var all = carRepository.findAll();
+        System.out.println("sd");
+        return carRepository.findAll().stream().map(carMapper::mapTo).toList();
     }
 
     @Override
