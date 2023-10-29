@@ -34,7 +34,8 @@ public class CarParser{
             for (Element element1 : elements1){
                 var name = element1.getElementsByTag("a").get(0).getElementsByTag("h4").get(0).text();
                 var body = element1.getElementsByClass("body").get(0).text();
-                modelRepository.saveAndFlush(Model.builder().bodyType(body).name(name).brand(brand1).build());
+                var img1 = element1.getElementsByTag("img").get(0).attr("src");
+                modelRepository.saveAndFlush(Model.builder().img(img1).bodyType(body).name(name).brand(brand1).build());
             }
             System.out.println(brand1.getId());
         }

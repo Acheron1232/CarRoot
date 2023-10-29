@@ -8,6 +8,7 @@ create table model(
     id bigserial primary key ,
     name text not null ,
     body_type text,
+    img text,
     brand_id bigint references brand(id)
 );
 

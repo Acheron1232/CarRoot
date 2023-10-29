@@ -5,6 +5,11 @@
     <title th:text="'Brand#'+${brand.get().id}">Brand</title>
 </head>
 <body>
-<p th:text="${brand.get().getId()}+'.'+${brand.get().getName()}"></p>
+<p th:text="${brand.get().getName()}"></p>
+<th:block th:each="model : ${models}">
+    <div th:text="${model.getName()}">Model name</div>
+    <div th:text="${model.getBodyType()}">Body Type</div>
+    <img th:src="${model.getImg()}">
+</th:block>
 </body>
 </html>

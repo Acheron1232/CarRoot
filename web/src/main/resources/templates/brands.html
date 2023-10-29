@@ -5,9 +5,10 @@
     <title>Brands</title>
 </head>
 <body>
-<th:block th:each="brand : ${brands}">
-    <a th:href="@{'/brands/'+${brand.id}}" th:text="${brand.id} +'.'+ ${brand.getName()}"></a>
-</th:block>
+<div th:each="brand : ${brands}" >
+    <a th:href="@{'/brands/'+${brand.id}}" th:text="${brand.id} +'.'+ ${brand.name}">Brand name</a>
+   <img th:src="${brand.image}">
+</div>
 
 </body>
 </html>

@@ -18,6 +18,7 @@ public class Model implements com.acheron.db.model.Entity<Long> {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String name;
+    String img;
     @Column(name = "body_type")
     String bodyType;
     @ManyToOne(fetch = FetchType.LAZY)
