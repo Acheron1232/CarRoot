@@ -23,12 +23,12 @@ spring:
 #  jpa:
 #    show-sql: true
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
-    username: postgres
-    password: root
-    driver-class-name: org.postgresql.Driver
-    #    url: jdbc:postgresql://surus.db.elephantsql.com:5432/nmrgasvq
-    #    username: nmrgasvq
-    #    password: 6bSTe6ScZKJwfMLWdpRQsWpuEzxbQmMX
-    #    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5432/postgres
+#    username: postgres
+#    password: root
+#    driver-class-name: org.postgresql.Driver
+        url: jdbc:postgresql://surus.db.elephantsql.com:5432/nmrgasvq
+        username: nmrgasvq
+        password: 6bSTe6ScZKJwfMLWdpRQsWpuEzxbQmMX
+        driver-class-name: org.postgresql.Driver
 
