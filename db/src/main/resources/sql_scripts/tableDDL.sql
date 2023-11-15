@@ -22,6 +22,7 @@ create table users(
     id bigserial primary key ,
     firstname text not null ,
     lastname text not null ,
+    password text,
     role text not null
 );
 

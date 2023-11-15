@@ -1,5 +1,12 @@
 package com.acheron.db.type;
 
-public enum Role {
-    BUYER,SELLER,ADMIN
+import org.springframework.security.core.GrantedAuthority;
+
+public enum Role implements GrantedAuthority {
+    SELLER,ADMIN,USER;
+
+    @Override
+    public String getAuthority() {
+        return name();
+    }
 }

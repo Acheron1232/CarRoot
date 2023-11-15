@@ -1,13 +1,34 @@
 server:
   port: 8080
 
+jwt:
+  secret: YXNkc2Fkc2Fkc2Fka2JzYWpoZHZoYWxzZmFzZnNmc2RmYWZk
+  lifetime: 20m
+
 spring:
+  mvc:
+    view:
+      suffix: .html
+      prefix: template/
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 677269980470-f0aod7gs1vngibk317mc9pbnncff4rk5.apps.googleusercontent.com
+            client-secret: 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
+            redirect-uri: http://localhost:8080/login/oauth2/code/google
+            scope: openid,email,profile
+
+#  jpa:
+#    show-sql: true
   datasource:
-    url: jdbc:postgresql://surus.db.elephantsql.com:5432/nmrgasvq
-    username: nmrgasvq
-    password: 6bSTe6ScZKJwfMLWdpRQsWpuEzxbQmMX
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: root
     driver-class-name: org.postgresql.Driver
-#  mvc:
-#    view:
-#      suffix: .html
-#      prefix: template/
+    #    url: jdbc:postgresql://surus.db.elephantsql.com:5432/nmrgasvq
+    #    username: nmrgasvq
+    #    password: 6bSTe6ScZKJwfMLWdpRQsWpuEzxbQmMX
+    #    driver-class-name: org.postgresql.Driver
+

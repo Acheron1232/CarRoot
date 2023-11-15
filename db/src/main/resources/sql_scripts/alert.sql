@@ -1,0 +1,4 @@
+ALTER TABLE users
+    ADD COLUMN username TEXT NOT NULL UNIQUE;
+ALTER TABLE users
+    ADD COLUMN password TEXT NOT NULL;

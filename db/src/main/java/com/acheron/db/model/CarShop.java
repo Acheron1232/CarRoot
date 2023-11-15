@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-@Table(name = "car_shop")
+@Table(name = "car_shop" ,schema = "caroot")
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder

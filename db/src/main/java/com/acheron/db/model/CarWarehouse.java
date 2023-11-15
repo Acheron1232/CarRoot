@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@Table(schema = "caroot")
 public class CarWarehouse implements com.acheron.db.model.Entity<Long> {
 
     @Id

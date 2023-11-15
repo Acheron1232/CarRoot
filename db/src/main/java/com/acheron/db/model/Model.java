@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Data
+@Table(schema = "caroot")
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder

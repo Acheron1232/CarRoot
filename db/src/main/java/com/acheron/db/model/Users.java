@@ -10,16 +10,19 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Data
+@Table(schema = "caroot")
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Users implements com.acheron.db.model.Entity<Long> {
+public class Users implements com.acheron.db.model.Entity<Long>  {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
+    String username;
     String firstname;
     String lastname;
+    String password;
     @Enumerated(value = EnumType.STRING)
     Role role;
 }
